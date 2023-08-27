@@ -10,7 +10,7 @@
 
     <script src="./axios.min.js"></script>
     <script>
-      axios.get('https://www.nseindia.com/api/equity-stockIndices?index=NIFTY%2050')
+      axios.get('https://www.nseindia.com/market-data/live-equity-market')
         .then(function (response) {
           document.getElementById('people').innerHTML = response.data;
         })
