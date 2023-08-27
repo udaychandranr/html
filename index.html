@@ -11,7 +11,7 @@
     <script src="./axios.min.js"></script>
     <script>
       async function logMovies() {
-  const response = await fetch("https://www.nseindia.com/market-data/live-equity-market");
+  const response = await fetch("https://www.nseindia.com/api/reportASM?csv=true");
   const movies = await response;
           document.getElementById('people').innerHTML = movies;
 }
