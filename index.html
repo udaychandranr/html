@@ -17,6 +17,20 @@
         .catch(function (err) {
           document.getElementById('people').innerHTML = '<li class="text-danger">' + err.message + '</li>';
         });
+
+      axios.get('https://www.nseindia.com/api/reportASM?csv=true')
+        .then((response) => {
+          document.getElementById('people').innerHTML = JSON.stringify(response.data);
+        })
+        .catch(function (err) {
+          document.getElementById('people').innerHTML = '<li class="text-danger">' + err + '</li>';
+        });
+      
+      fetch('https://www.nseindia.com/api/quote-equity?symbol=3IINFOLTD')
+        .then(res => res.json())
+        .then(json => {
+          console.log(json.industryInfo.macro);
+        });
     </script>
   </body>
 </html>
