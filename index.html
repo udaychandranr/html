@@ -10,7 +10,7 @@
 
     <script src="./axios.min.js"></script>
     <script>
-      axios.get('/get/server')
+      axios.get('server')
         .then(function (response) {
           document.getElementById('people').innerHTML = response.data.map(function (person) {
             return (
